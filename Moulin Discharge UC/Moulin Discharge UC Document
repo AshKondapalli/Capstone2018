@@ -1,1 +1,30 @@
 
+UC-4: Supraglacial Stream Discharge
+We are creating a pipeline to delineate streams in the Greenland Ice Sheet (GrIS) from other 
+forms of water (i.e. slush, lakes). The user will log into the head node of the HPC, submit the satellite images 
+to the job scheduler, and then the compute node will process the image. An updated image with the delineated streams 
+will then be sent back to the user.
+
+
+Actors:
+User (initiating)
+Head node (participator)
+Compute node (participator)
+Job Scheduler (participator)
+
+
+Preconditions:
+-High resolution satellite image of the GrIS 
+
+
+Postconditions:
+-Updated image with streams delineated from other forms of ice (i.e. slush, bare ice)
+
+
+Flow of events
+User logs into head node of HPC system
+User submits the set of images (job) to the job scheduler
+Scheduler sends job to compute node
+Compute node delineates stream and eliminates slush
+Compute node generates output file
+Output file sent back to user with updated, delineated image
